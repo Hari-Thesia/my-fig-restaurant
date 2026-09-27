@@ -1,1 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Outfit:wght@300;400;500;600&display=swap');
+@import 'tailwindcss';
 
+@theme inline {
+  --font-display: 'Fraunces', serif;
+  --font-body: 'Outfit', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #ead9b7;
+  color: #241712;
+  font-family: 'Outfit', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.font-display {
+  font-family: 'Fraunces', serif;
+}
+
+.section-label {
+  color: #8d3528;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.button {
+  align-items: center;
+  border: 1px solid transparent;
+  display: inline-flex;
+  justify-content: center;
+  min-height: 46px;
+  padding: 0 1.5rem;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease;
+}
+
+.button-dark {
+  background: #2c1814;
+  color: #f4e5c9;
+}
+
+.button-dark:hover,
+.button-rust:hover {
+  background: #4b211a;
+}
+
+.button-rust {
+  background: #8d3528;
+  color: #f5e6c9;
+}
+
+.button-outline {
+  border-color: rgb(111 36 28 / 35%);
+  color: #6f241c;
+}
+
+.button-outline:hover {
+  border-color: #6f241c;
+}
+
+.field-label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  color: #8d3528;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+}
+
+.field {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid rgb(111 36 28 / 28%);
+  border-radius: 0;
+  outline: none;
+  background: transparent;
+  padding: 0.75rem 0;
+  color: #2c1814;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: normal;
+  text-transform: none;
+  transition: border-color 180ms ease;
+}
+
+.field:focus {
+  border-color: #8d3528;
+}
+
+.field::placeholder {
+  color: #927b68;
+}
+
+.footer-label {
+  margin-bottom: 1rem;
+  color: #d6a27b;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+::selection {
+  background: #8d3528;
+  color: #f5e6c9;
+}
